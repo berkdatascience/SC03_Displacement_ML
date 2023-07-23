@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Displacement Prediction App</title>
+</head>
+<body>
+    <h1>Displacement Prediction App</h1>
+
+    <form method="POST">
+        <!-- Add an input field for each feature -->
+        <!-- The "name" attribute should match the feature name -->
+        <input type="number" name="htc" placeholder="htc">
+        <input type="number" name="flow_temperature" placeholder="flow_temperature">
+        <!-- Add more input fields as needed -->
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if predictions %}
+        <!-- Display predictions -->
+        <h2>Predictions:</h2>
+        <p>Axial Displacement: {{ predictions['axial_disp'][0] }}</p>
+        <p>Radial Displacement: {{ predictions['radial_disp'][0] }}</p>
+    {% endif %}
+</body>
+</html>
