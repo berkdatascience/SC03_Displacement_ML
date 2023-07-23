@@ -8,7 +8,7 @@ scaler = joblib.load('scaler.joblib')
 models = {}
 output_cols = ['axial_disp', 'radial_disp']
 for output_col in output_cols:
-    models[output_col] = joblib.load(f'model_{output_col}.joblib')
+    models[output_col] = joblib.load(f'{output_col}_model.joblib')
 
 def main():
     st.title('Displacement Prediction')
